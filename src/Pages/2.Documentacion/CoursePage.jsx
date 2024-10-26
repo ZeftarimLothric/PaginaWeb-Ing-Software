@@ -34,7 +34,7 @@ export function CoursePage({ onNavigate }) {
         title: "2. Variables y tipo de datos",
         content: (
           <div>
-            <p className="docText">
+            <div className="docText">
               <p>
                 En Java, las variables son contenedores que almacenan valores.
                 Cada variable debe declararse con un tipo de dato que define el
@@ -49,7 +49,7 @@ export function CoursePage({ onNavigate }) {
                 cifras decimales de manera precisa, mientras que double puede
                 mantener hasta 15.
               </p>
-            </p>
+            </div>
             <div className="h-[180px]">
               <CodeEditor
                 initialCode={`public class Main {
@@ -71,7 +71,7 @@ export function CoursePage({ onNavigate }) {
         title: "3. Declaracion de variables",
         content: (
           <div>
-            <p className="docText">
+            <div className="docText">
               <p>
                 Antes de usar una variable, es necesario declararla, lo que
                 implica especificar su tipo y darle un nombre. Las variables
@@ -82,7 +82,7 @@ export function CoursePage({ onNavigate }) {
                 encuentra en la imagen " 1 " que se muestra en el apartado
                 anterior).
               </p>
-            </p>
+            </div>
           </div>
         ),
       },
@@ -92,7 +92,7 @@ export function CoursePage({ onNavigate }) {
         title: "4. Operadores en Java",
         content: (
           <div>
-            <p className="docText">
+            <div className="docText">
               <p>
                 Java utiliza una variedad de operadores para realizar
                 operaciones en variables y valores. Estos incluyen operadores
@@ -175,7 +175,7 @@ export function CoursePage({ onNavigate }) {
                   readOnly={true}
                 />
               </div>
-            </p>
+            </div>
           </div>
         ),
       },
@@ -183,12 +183,12 @@ export function CoursePage({ onNavigate }) {
         title: "5. Control de flujo",
         content: (
           <div>
-            <p className="docText">
+            <div className="docText">
               <p>
                 Java proporciona varias estructuras para controlar el flujo de
                 ejecución del programa. Estas incluyen:
               </p>
-              <p className="docText indent-8">
+              <div className="docText indent-8">
                 <span className="font-bold">•Condicionales:</span> Permiten
                 ejecutar bloques de código basados en ciertas condiciones. El
                 uso de sentencias if, else, y switch es común en Java para
@@ -287,15 +287,15 @@ export function CoursePage({ onNavigate }) {
                     readOnly={true}
                   />
                 </div>
-              </p>
-            </p>
+              </div>
+            </div>
           </div>
         ),
       },
       {
         title: "6. Ciclos y bucles",
         content: (
-          <p className="docrText indent-8">
+          <div className="docrText indent-8">
             <p className="docText indent-16">
               <span className="font-bold ">1. Bucle [for]:</span>
               El bucle for se usa cuando se conoce de antemano cuántas veces se
@@ -375,7 +375,7 @@ export function CoursePage({ onNavigate }) {
                 readOnly={true}
               />
             </div>
-          </p>
+          </div>
         ),
       },
     ],
