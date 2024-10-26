@@ -50,7 +50,7 @@ export function CoursePage({ onNavigate }) {
                 mantener hasta 15.
               </p>
             </div>
-            <div className="h-[180px]">
+            <div className="">
               <CodeEditor
                 initialCode={`public class Main {
     public static void main(String[] args) {
@@ -104,7 +104,7 @@ export function CoursePage({ onNavigate }) {
               <h3 className="docTitle text-[25px]">
                 4.1 Operadores Aritmeticos
               </h3>
-              <div className="h-[180px]">
+              <div className="">
                 <CodeEditor
                   initialCode={`public class Main {
     public static void main(String[] args) {
@@ -121,7 +121,7 @@ export function CoursePage({ onNavigate }) {
               <h3 className="docTitle text-[25px]">
                 4.2 Operadores de Comparacion
               </h3>
-              <div className="h-[440px]">
+              <div className="">
                 <CodeEditor
                   initialCode={`public class Main {
     public static void main(String[] args) {
@@ -150,7 +150,7 @@ export function CoursePage({ onNavigate }) {
                 />
               </div>
               <h3 className="docTitle text-[25px]">4.3 Operadores Logicos</h3>
-              <div className="h-[380px]">
+              <div className="">
                 <CodeEditor
                   initialCode={`public class Main {
     public static void main(String[] args) {
@@ -198,7 +198,7 @@ export function CoursePage({ onNavigate }) {
                   La sentencia if se usa para ejecutar un bloque de código solo
                   si una condición es verdadera.
                 </p>
-                <div className="h-[250px] indent-0">
+                <div className="indent-0">
                   <CodeEditor
                     initialCode={`public class Main {
     public static void main(String[] args) {
@@ -214,6 +214,7 @@ export function CoursePage({ onNavigate }) {
     }
 }`}
                     readOnly={true}
+                    height="320px"
                   />
                 </div>
                 <p className="docText indent-16">
@@ -223,7 +224,7 @@ export function CoursePage({ onNavigate }) {
                   Las sentencias else if y else se utilizan para proporcionar
                   más opciones cuando la primera condición if no es verdadera.
                 </p>
-                <div className="h-[460px] indent-0">
+                <div className="indent-0">
                   <CodeEditor
                     initialCode={`public class Main {
     public static void main(String[] args) {
@@ -254,7 +255,7 @@ export function CoursePage({ onNavigate }) {
                   cuando se compara el valor de una variable con varias opciones
                   posibles. Es más eficiente cuando se tienen muchos casos.
                 </p>
-                <div className="h-[540px] indent-0">
+                <div className=" indent-0">
                   <CodeEditor
                     initialCode={`public class Main {
     public static void main(String[] args) {
@@ -302,7 +303,7 @@ export function CoursePage({ onNavigate }) {
               quiere ejecutar un bloque de código. Es comúnmente utilizado para
               iterar a través de un rango de números.
             </p>
-            <div className="h-[380px] indent-0">
+            <div className="indent-0">
               <CodeEditor
                 initialCode={`public class Main {
     public static void main(String[] args) {
@@ -333,7 +334,7 @@ export function CoursePage({ onNavigate }) {
               verdadera. Es útil cuando no se sabe de antemano cuántas veces se
               ejecutará el bucle.
             </p>
-            <div className="h-[250px] indent-0">
+            <div className="indent-0">
               <CodeEditor
                 initialCode={`public class Main {
     public static void main(String[] args) {
@@ -357,7 +358,7 @@ export function CoursePage({ onNavigate }) {
               bloque de código se ejecutará al menos una vez, ya que la
               condición se evalúa después de ejecutar el código.
             </p>
-            <div className="h-[290px] indent-0">
+            <div className="indent-0">
               <CodeEditor
                 initialCode={`public class Main {
     public static void main(String[] args) {

@@ -1,8 +1,33 @@
-// CodeEditor.jsx
 import React, { useState, useEffect } from "react";
 import MonacoEditor from "@monaco-editor/react";
+import { loader } from "@monaco-editor/react";
 
-const CodeEditor = ({ initialCode = false }) => {
+// Preload Monaco Editor
+loader.init().then((monaco) => {
+  monaco.editor.defineTheme("modernTheme", {
+    base: "vs-dark",
+    inherit: true,
+    rules: [
+      { token: "comment", foreground: "6A9955", fontStyle: "italic" },
+      { token: "keyword", foreground: "569CD6" },
+      { token: "string", foreground: "CE9178" },
+    ],
+    colors: {
+      "editor.background": "#1E1E1E",
+      "editor.foreground": "#D4D4D4",
+      "editorLineNumber.foreground": "#858585",
+      "editor.lineHighlightBackground": "#2F3139",
+    },
+  });
+});
+
+const calculateHeight = (code) => {
+  const lineCount = code.split("\n").length;
+  const baseHeight = Math.max(lineCount * 24, 100);
+  return `${baseHeight + 20}px`; // Añadimos 20px extra
+};
+
+export default function CodeEditor({ initialCode = "", readOnly = false }) {
   const [code, setCode] = useState(initialCode);
 
   useEffect(() => {
@@ -10,25 +35,36 @@ const CodeEditor = ({ initialCode = false }) => {
   }, [initialCode]);
 
   return (
-    <MonacoEditor
-      height="100%"
-      language="java"
-      value={code}
-      onChange={(value) => setCode(value)}
-      theme="vs-dark"
-      options={{
-        selectOnLineNumbers: true,
-        readOnly: false,
-        scrollBeyondLastLine: false,
-        scrollbar: {
-          vertical: "hidden",
-          horizontal: "hidden",
-        },
-        wordWrap: "on", // Ajuste de texto
-        minimap: { enabled: false }, // Deshabilitar minimapa
-      }}
-    />
+    <div className="rounded-lg overflow-hidden border border-gray-700 ">
+      <MonacoEditor
+        language="java"
+        value={code}
+        onChange={(value) => setCode(value)}
+        theme="modernTheme"
+        style={{ border: "none" }}
+        options={{
+          fontFamily: "'Fira Code', monospace",
+          fontSize: 14,
+          lineHeight: 24,
+          minimap: { enabled: false },
+          scrollBeyondLastLine: false,
+          folding: true,
+          lineNumbers: "on",
+          renderLineHighlight: "all",
+          readOnly: readOnly,
+          wordWrap: "on",
+          autoIndent: "full",
+          formatOnPaste: true,
+          formatOnType: true,
+          suggestOnTriggerCharacters: true,
+          tabSize: 2,
+          cursorBlinking: "smooth",
+          cursorSmoothCaretAnimation: true,
+          smoothScrolling: true,
+          automaticLayout: true,
+        }}
+        height={calculateHeight(initialCode)}
+      />
+    </div>
   );
-};
-
-export default CodeEditor;
+}
