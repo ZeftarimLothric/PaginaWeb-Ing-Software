@@ -395,8 +395,7 @@ export function CoursePage({ onNavigate }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-900 text-white">
-      {/* ref={mainContentRef} */}
-      <div>
+      <div ref={mainContentRef}>
         <Header onNavigate={onNavigate} />
       </div>
 
