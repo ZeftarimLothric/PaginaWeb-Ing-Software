@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import {
-  User,
   Coffee,
   House,
   SquareChevronRight,
   Menu,
-  UserRound,
-  UserCircle,
   UserCircle2Icon,
 } from "lucide-react";
 
