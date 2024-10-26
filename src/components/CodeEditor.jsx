@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import MonacoEditor from "@monaco-editor/react";
 import { loader } from "@monaco-editor/react";
 
-// Preload Monaco Editor
 loader.init().then((monaco) => {
   monaco.editor.defineTheme("modernTheme", {
     base: "vs-dark",
@@ -24,7 +23,7 @@ loader.init().then((monaco) => {
 const calculateHeight = (code) => {
   const lineCount = code.split("\n").length;
   const baseHeight = Math.max(lineCount * 24, 100);
-  return `${baseHeight + 20}px`; // Añadimos 20px extra
+  return `${baseHeight + 20}px`;
 };
 
 export default function CodeEditor({ initialCode = "", readOnly = false }) {

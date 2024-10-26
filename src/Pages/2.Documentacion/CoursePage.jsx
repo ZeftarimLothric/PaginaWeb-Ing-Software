@@ -3,7 +3,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ContentSection } from "../../components/ContectSection";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
-import { ImageModal } from "../../components/ImageModal";
 import CodeEditor from "../../components/CodeEditor";
 
 export function CoursePage({ onNavigate }) {
@@ -437,14 +436,6 @@ export function CoursePage({ onNavigate }) {
       </main>
 
       <Footer />
-
-      {/* Mostrar el modal de la imagen */}
-      <ImageModal
-        isOpen={!!selectedImage}
-        imgSrc={selectedImage?.src}
-        imgAlt={selectedImage?.alt}
-        onClose={() => setSelectedImage(null)}
-      />
     </div>
   );
 }

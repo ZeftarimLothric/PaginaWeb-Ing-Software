@@ -13,13 +13,11 @@ export function Header({ onNavigate }) {
   return (
     <header className="bg-gray-800 py-3">
       <div className="container mx-auto px-4 flex justify-between items-center sticky">
-        {/* Logo */}
         <div className="flex items-center space-x-2">
           <Coffee className="h-5 w-5 text-orange-500 md:h-6 md:w-6" />
           <span className="text-lg font-bold md:text-xl">JavaCourse</span>
         </div>
 
-        {/* Botón de menú hamburguesa solo visible en móviles */}
         <div className="flex items-center space-x-2 lg:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -30,7 +28,6 @@ export function Header({ onNavigate }) {
           <UserCircle2Icon className="h-7 w-7 lg:block text-gray-300" />
         </div>
 
-        {/* Navegación */}
         <nav
           className={`${
             isMobileMenuOpen ? "block" : "hidden"
@@ -59,7 +56,6 @@ export function Header({ onNavigate }) {
           </button>
         </nav>
 
-        {/* Icono de usuario en pantallas grandes */}
         <UserCircle2Icon className="h-7 w-7 lg:block hidden text-gray-300" />
       </div>
     </header>

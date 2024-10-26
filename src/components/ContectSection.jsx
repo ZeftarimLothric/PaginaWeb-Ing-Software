@@ -22,11 +22,9 @@ export function ContentSection({
         )}
         <div className="flex-grow">
           <div className="text-gray-300">{content}</div>{" "}
-          {/* Cambiar <p> a <div> */}
         </div>
         <div className="flex-grow">
           <div className="text-gray-300 font-bold">{subtitles}</div>{" "}
-          {/* Cambiar <p> a <div> */}
         </div>
         {rightImage && (
           <div className="flex-shrink-0">
