@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { ContentSection } from "../../components/ContectSection";
-import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
-import CodeEditor from "../../components/CodeEditor";
-import CodeEditorEjercisios from "../../components/CodeEditorEjercisios";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import CodeEditor from "./components/CodeEditorEjercisios";
+import { ContentSection } from "./components/ContectSection";
 
-export function CoursePage({ onNavigate }) {
+export function Test({ onNavigate }) {
   const [currentPage, setCurrentPage] = useState(0);
+  const [selectedImage, setSelectedImage] = useState(null);
   const mainContentRef = useRef(null);
 
   useEffect(() => {
@@ -16,19 +16,6 @@ export function CoursePage({ onNavigate }) {
 
   const sections = [
     [
-      {
-        title: "1. ¿Qué es Java?",
-        content: (
-          <p className="docText">
-            Java es un lenguaje multiplataforma cuyo principio clave es “escribe
-            una vez, ejecuta en cualquier lugar” (WORA). Esto significa que una
-            vez que el código se compila en bytecode, puede ejecutarse en
-            cualquier sistema que tenga la Máquina Virtual de Java (JVM). Es
-            altamente seguro, con una recolección de basura automática y una
-            gestión de memoria eficiente.
-          </p>
-        ),
-      },
       {
         title: "2. Variables y tipo de datos",
         content: (
@@ -66,30 +53,7 @@ export function CoursePage({ onNavigate }) {
           </div>
         ),
       },
-      {
-        title: "3. Declaracion de variables",
-        content: (
-          <div>
-            <div className="docText">
-              <p>
-                Antes de usar una variable, es necesario declararla, lo que
-                implica especificar su tipo y darle un nombre. Las variables
-                pueden inicializarse (darles un valor) en el momento de la
-                declaración o más adelante en el código. Es una buena práctica
-                dar nombres significativos a las variables para hacer el código
-                más legible y comprensible (La forma de declaras variables se
-                encuentra en la imagen " 1 " que se muestra en el apartado
-                anterior).
-              </p>
-            </div>
-          </div>
-        ),
-      },
     ],
-    //
-    //
-    //
-    // SEGUNDA PAGINA
     [
       {
         title: "4. Operadores en Java",
@@ -377,77 +341,6 @@ export function CoursePage({ onNavigate }) {
     }
 }`}
                 readOnly={true}
-              />
-            </div>
-          </div>
-        ),
-      },
-    ],
-    //
-    //
-    // TERCERA PAGINA
-    [
-      {
-        title: "TESTEO DE EJERCIOS (uso temporal)",
-        content: (
-          <div>
-            <div className="docText">
-              <h2 className="docTitle">
-                Ejercicio: Generar una pirámide con asteriscos
-              </h2>
-              <p className="docText">
-                Escribe un programa en Java que imprima una pirámide de
-                asteriscos. La pirámide debe tener un número específico de
-                filas, que podras configurar manualmente con una variable. Cada
-                fila de la pirámide debe contener un número impar de asteriscos,
-                centrados horizontalmente. Por ejemplo, si el usuario ingresa 5,
-                la salida del programa debería ser la siguiente:
-              </p>
-              <CodeEditor
-                initialCode={`\
-    *
-   ***
-  *****
- *******
-*********`}
-              />
-            </div>
-            <div className="">
-              <CodeEditorEjercisios
-                initialCode={`public class Piramide {
-    public static void main(String[] args) {
-        // int altura = 5; // Altura de la pirámide
-
-        // for (int i = 1; i <= altura; i++) {
-        //     for (int j = 1; j <= altura - i; j++) {
-        //         System.out.print(" ");
-        //     }
-        //     for (int k = 1; k <= (2 * i) - 1; k++) {
-        //         System.out.print("*");
-        //     }
-        //     System.out.println();
-        // }
-    }
-}`}
-                readOnly={false}
-                solutionCode={`public class Piramide {
-    public static void main(String[] args) {
-        int altura = 5; // Altura de la pirámide
-
-        for (int i = 1; i <= altura; i++) {
-            // Imprimir espacios
-            for (int j = 1; j <= altura - i; j++) {
-                System.out.print(" ");
-            }
-            // Imprimir asteriscos
-            for (int k = 1; k <= (2 * i) - 1; k++) {
-                System.out.print("*");
-            }
-            // Salto de línea
-            System.out.println();
-        }
-    }
-}`}
               />
             </div>
           </div>

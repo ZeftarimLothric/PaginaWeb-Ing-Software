@@ -23,10 +23,10 @@ loader.init().then((monaco) => {
 const calculateHeight = (code) => {
   const lineCount = code.split("\n").length;
   const baseHeight = Math.max(lineCount * 24, 100);
-  return `${baseHeight + 20}px`;
+  return `${baseHeight}px`;
 };
 
-export default function CodeEditor({ initialCode = "", readOnly = false }) {
+export default function CodeEditor({ initialCode = "", readOnly = true }) {
   const [code, setCode] = useState(initialCode);
 
   useEffect(() => {
