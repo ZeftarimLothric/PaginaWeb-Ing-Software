@@ -416,6 +416,8 @@ export function CoursePage({ onNavigate }) {
               <CodeEditorEjercisios
                 initialCode={`public class Piramide {
     public static void main(String[] args) {
+        // Para probar solo descomenta las lineas comentada, seleccionalas (menos estas) y pulsa ctrl+/, en taclado español es ctrl+}
+        // si no funciona solo borra las // de forma manual.
         // int altura = 5; // Altura de la pirámide
 
         // for (int i = 1; i <= altura; i++) {
