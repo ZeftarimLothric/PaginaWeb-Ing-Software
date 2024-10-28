@@ -8,8 +8,8 @@ export function ContentSection({
   rightImage,
 }) {
   return (
-    <section className="bg-gray-800 rounded-lg p-6 mb-8">
-      <h2 className="text-[30px] font-bold text-white">{title}</h2>
+    <section className="bg-[#fedecc] rounded-lg p-6 mb-8">
+      <h2 className="text-[30px] font-bold text-gray-900">{title}</h2>
       <div className="flex items-center space-x-4">
         {leftImage && (
           <div className="flex-shrink-0">
@@ -21,10 +21,10 @@ export function ContentSection({
           </div>
         )}
         <div className="flex-grow">
-          <div className="text-gray-300">{content}</div>{" "}
+          <div className="text-gray-900">{content}</div>{" "}
         </div>
         <div className="flex-grow">
-          <div className="text-gray-300 font-bold">{subtitles}</div>{" "}
+          <div className="text-gray-900 font-bold">{subtitles}</div>{" "}
         </div>
         {rightImage && (
           <div className="flex-shrink-0">

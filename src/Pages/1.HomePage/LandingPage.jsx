@@ -7,8 +7,8 @@ export function LandingPage({ onNavigate }) {
     <div className="min-h-screen flex flex-col bg-[url('/img/BackgroundJava.jpg')] text-white">
       <Header onNavigate={onNavigate} />
 
-      <main className="flex-grow flex items-center justify-center px-4">
-        <div className="container mx-auto px-4">
+      <main className="flex-grow flex items-center px-4">
+        <div className="rounded-[50px] pr-96 px-4 py-4">
           <h1 className="text-[40px] sm:text-[60px] font-bold mb-4 md:mb-16">
             APRENDE <span className="text-orange-500">JAVA</span> BASICO
           </h1>

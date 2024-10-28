@@ -34,7 +34,7 @@ export default function CodeEditor({ initialCode = "", readOnly = true }) {
   }, [initialCode]);
 
   return (
-    <div className="rounded-lg overflow-hidden border border-gray-700 ">
+    <div className="overflow-hidden ">
       <MonacoEditor
         language="java"
         value={code}

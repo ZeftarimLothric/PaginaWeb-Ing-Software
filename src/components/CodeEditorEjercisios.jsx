@@ -116,13 +116,13 @@ export default function CodeEditorEjercisios({
       <div className="flex justify-end space-x-4 mt-4">
         <button
           onClick={executeCode}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-[#d33f0f] hover:bg-[#913416] text-white font-bold py-2 px-4 rounded"
         >
           Ejecutar código
         </button>
         <button
           onClick={() => setShowSolution(!showSolution)}
-          className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-[#d33f0f] hover:bg-[#913416] text-white font-bold py-2 px-4 rounded"
         >
           {showSolution ? "Ocultar solución" : "Mostrar solución"}
         </button>
@@ -130,7 +130,7 @@ export default function CodeEditorEjercisios({
 
       <div className="mt-4">
         <h3 className="text-lg font-semibold mb-2">Resultado:</h3>
-        <pre className="bg-gray-800 text-white p-4 rounded-md whitespace-pre-wrap">
+        <pre className="bg-[#fedecc] text-black font-bold text-2xl p-4 rounded-md whitespace-pre-wrap">
           {output}
         </pre>
       </div>
