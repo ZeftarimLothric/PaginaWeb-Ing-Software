@@ -8,7 +8,7 @@ export function ContentSection({
   rightImage,
 }) {
   return (
-    <section className="bg-[#fedecc] rounded-lg p-6 mb-8">
+    <section className="bg-[#ffddc9] rounded-lg p-6 mb-8">
       <h2 className="text-[30px] font-bold text-gray-900">{title}</h2>
       <div className="flex items-center space-x-4">
         {leftImage && (
