@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { ContentSection } from "../../components/ContectSection";
+import { ContentSection } from "../../components/ContentSection";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import CodeEditor from "../../components/CodeEditor";
