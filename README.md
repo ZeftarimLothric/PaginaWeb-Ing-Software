@@ -1,4 +1,4 @@
-# EduPulse - Periódico Escolar
+# Aprende java - Pagina para aprender java
 
 ## Requisitos Previos
 
